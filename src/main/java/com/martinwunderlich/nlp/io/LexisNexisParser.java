@@ -1,3 +1,20 @@
+/*************************************************************************************************************
+ * LexisNexisParser - A Java wrapper for LexisNexis data.
+ * Copyright 2015 Martin Wunderlich
+ * 
+ * This library is free software; you can redistribute it and/or modify it under the terms of the
+ * 
+ * GNU Lesser General Public License (LGPL)
+ * 
+ * as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ * 
+ * This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details. You should have received a copy
+ * of the GNU Lesser General Public License along with this library. If not, see http://www.gnu.org/licenses/.
+ **************************************************************************************************************/
+
 package com.martinwunderlich.nlp.io;
 
 import java.io.File;
@@ -27,7 +44,7 @@ public class LexisNexisParser {
 	Map<String, Pattern> metaDataMapping = null;
 	Properties config = new Properties();
 	String propertiesFile = "config.properties";
-	Pattern docStartPattern = Pattern.compile("^^\\s+(Dokument|Document) [0-9]+ (von|of) [0-9]+$");	// TODO: Support other langauges than EN and DE?
+	Pattern docStartPattern = Pattern.compile("^^\\s+(Dokument|Document) [0-9]+ (von|of) [0-9]+$");	// TODO: Support other languages than EN and DE?
 	
 	public LexisNexisParser() {
 		loadConfiguration();
